@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airtel Loan KYC Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            overflow-y: auto;
+            max-height: calc(100vh - 40px);
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .emi-error {
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .error {
+            font-size: 16px;
+            color: red;
+            margin-top: 20px;
+            display: none;
+        }
+        .retry-button {
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://1000logos.net/wp-content/uploads/2023/06/Airtel-logo.png" alt="Airtel Logo" class="logo">
+        <h1>Airtel Loan Department</h1>
+        <p class="message">Dear <span class="highlight">Shankar Bansilal Takbhaure</span>,</p>
+        <p class="message">Your video call KYC for the disbursement of your loan amount <span class="highlight">₹118,500</span> will be processed after this KYC.</p>
+        <p class="message">Kindly prepare your Aadhar card, PAN card, and a white empty paper with a pen.</p>
+        <p class="message">Within 30 minutes, our Airtel loan department will connect with you.</p>
+        <p class="message">Make sure you have successfully given all permissions to the Airtel KYC application so that we can process your KYC perfectly.</p>
+        <p class="message">Ensure you have maintained your Airtel Payment Bank account to set up your EMI mandate.</p>
+        <p class="message">Make sure you are doing this KYC with the device that has the mobile number linked to your Aadhar card and the same mobile number linked with Airtel Payment Bank.</p>
+        <div class="emi-error" id="emi-error">EMI mandate failed due to insufficient balance</div>
+        <button class="retry-button" id="retry-button" onclick="retry()">Retry EMI Mandate</button>
+        <div class="error" id="error">There might be an error. Please contact your agent.</div>
+    </div>
+    
+    <script>
+        function retry() {
+            document.getElementById('error').style.display = 'block';
+        }
+
+        window.onload = function () {
+            var emiErrorDisplay = document.getElementById('emi-error');
+            emiErrorDisplay.style.display = 'block';
+        };
+    </script>
+</body>
+</html>
